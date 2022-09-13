@@ -3,5 +3,6 @@ A Chrome extension that allows you to look at your RateYourMusic notifications a
 
 to do :
 - change the hardcoded user profile to a dynamic one
-- better styling
+- use vanilla JS instead of jQuery
 - make the delete buttons work
+- better styling
