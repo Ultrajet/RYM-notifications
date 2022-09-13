@@ -1,0 +1,12 @@
+{
+    "name": "RYM Notifications Pop-up",
+    "description": "Access your RYM notifications anytime",
+    "version": "1.0",
+    "manifest_version": 3,
+    "permissions": ["cookies","tabs"],
+    "host_permissions": ["https://rateyourmusic.com/"],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "sonemic-16.png"
+    }
+}
