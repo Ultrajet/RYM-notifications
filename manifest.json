@@ -1,6 +1,6 @@
 {
     "name": "RYM Notifications Pop-up",
-    "description": "Access your RYM notifications anytime",
+    "description": "Access your RYM notifications at any time",
     "version": "1.0",
     "manifest_version": 3,
     "permissions": ["cookies","tabs"],

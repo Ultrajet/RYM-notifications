@@ -1,5 +1,16 @@
 $(function() {
-  $('#container').load('https://rateyourmusic.com/~Ultrajet #allNotifications');
+  // récupérer le username via les cookies
+  chrome.cookies.get(
+    {
+      name: 'username',
+      url: 'https://rateyourmusic.com'
+    },
+    cookie => {
+      let string = 'https://rateyourmusic.com/~'+ cookie.value +' #allNotifications';
+      $('#container').load(string);
+    }
+  );
+
   $('body').on('click', 'a', e => {
     // ouvrir le lien dans un nouvel onglet tout en y ajoutant l'url de RYM
     e.preventDefault();
