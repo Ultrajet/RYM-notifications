@@ -7,7 +7,11 @@ $(function() {
     },
     cookie => {
       let string = 'https://rateyourmusic.com/~'+ cookie.value +' #allNotifications';
-      $('#container').load(string);
+      $('#container').load(string, () => {
+        if ($('#container').is(':empty')) {
+          $('#container').html('<p>Not connected<br><a href="/account/login">https://rateyourmusic.com/account/login</a></p>');
+        }
+      });
     }
   );
 
