@@ -6,3 +6,4 @@ to do :
 - make the delete buttons work
 - use vanilla JS instead of jQuery
 - better styling
+- add configuration buttons

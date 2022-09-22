@@ -15,15 +15,20 @@ $(function() {
     }
   );
 
-  $('body').on('click', 'a', e => {
+  $('body').on('click', 'a', event => {
     // ouvrir le lien dans un nouvel onglet tout en y ajoutant l'url de RYM
-    e.preventDefault();
-    let href = e.currentTarget.getAttribute('href');
-    let url = 'https://rateyourmusic.com' + href;
-    chrome.tabs.create({
-      url: url,
-      active: true,
-    });
+    event.preventDefault();
+    let href = event.currentTarget.getAttribute('href');
+    let url = '';
+    if (event.currentTarget.classList[0] === 'btn') {
+      url = 'https://rateyourmusic.com/' + href;
+    } else {
+      url = 'https://rateyourmusic.com' + href;
+      chrome.tabs.create({
+        url: url,
+        active: true,
+      });
+    }
     return false;
   });
 });
